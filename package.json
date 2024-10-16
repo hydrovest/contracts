@@ -7,7 +7,9 @@
     "test": "npx hardhat test",
     "compile": "npx hardhat compile",
     "accounts": "npx hardhat accounts",
-    "clean": "npx hardhat clean"
+    "clean": "npx hardhat clean",
+    "prepare": "husky",
+    "lint": "eslint"
   },
   "repository": {
     "type": "git",
@@ -27,6 +29,9 @@
   "homepage": "https://github.com/hydrovest/contracts#readme",
   "packageManager": "yarn@4.4.1+sha512.f825273d0689cc9ead3259c14998037662f1dcd06912637b21a450e8da7cfeb4b1965bbee73d16927baa1201054126bc385c6f43ff4aa705c8631d26e12460f1",
   "devDependencies": {
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "@eslint/js": "^9.12.0",
     "@nomicfoundation/hardhat-ignition": "^0.15.0",
     "@nomicfoundation/hardhat-ignition-viem": "^0.15.0",
     "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
@@ -38,11 +43,17 @@
     "@types/mocha": ">=9.1.0",
     "@types/node": ">=18.0.0",
     "chai": "^4.2.0",
+    "eslint": "^9.12.0",
+    "globals": "^15.11.0",
     "hardhat": "^2.22.13",
     "hardhat-gas-reporter": "^1.0.8",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3",
     "solidity-coverage": "^0.8.0",
     "ts-node": ">=8.0.0",
     "typescript": "~5.0.4",
+    "typescript-eslint": "^8.9.0",
     "viem": "^2.7.6"
   }
 }
