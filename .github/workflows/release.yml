@@ -23,9 +23,14 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          cache: "yarn"
-      - run: yarn install
-      - run: yarn lint
+      - name: Enable corepack
+        run: corepack enable
+      - name: Install Yarn v4.x
+        run: corepack prepare yarn@4.4.1 --activate
+      - name: Install dependencies
+        run: yarn install
+      - name: Run lint
+        run: yarn lint
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
