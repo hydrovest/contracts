@@ -9,7 +9,9 @@
     "accounts": "npx hardhat accounts",
     "clean": "npx hardhat clean",
     "prepare": "husky",
-    "lint": "eslint"
+    "lint": "eslint",
+    "deploy:usdc": "npx ts-node scripts/01-deployment-usdc.ts",
+    "deploy:investment:pools": "npx ts-node scripts/02-deployment-investment-pools.ts"
   },
   "repository": {
     "type": "git",

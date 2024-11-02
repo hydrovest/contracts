@@ -37,7 +37,7 @@ async function main() {
     tokenAddress = (await publicClient.readContract({
       address: contractAddress,
       abi,
-      functionName: "fishToken",
+      functionName: "hydroToken",
       args: [],
     })) as Address;
 

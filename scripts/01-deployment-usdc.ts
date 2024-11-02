@@ -8,6 +8,9 @@ import {
 import { userConnectWallet } from "./helpers/userConnectWallet";
 import { connectToBlockchainWithRPC } from "./helpers/connectToBlockchainWithRPC";
 
+const TOKEN_NAME = "USD Coin";
+const TOKEN_SYMBOL = "USDC";
+
 async function getUserAccount() {
   return await userConnectWallet();
 }
@@ -23,7 +26,7 @@ async function main() {
   const hash = await deployer.deployContract({
     abi,
     bytecode: bytecode as `0x${string}`,
-    args: [],
+    args: [TOKEN_NAME, TOKEN_SYMBOL],
   });
   const receipt = await publicClient.waitForTransactionReceipt({ hash });
   if (receipt.contractAddress) {
