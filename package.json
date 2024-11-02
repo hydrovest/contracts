@@ -9,7 +9,12 @@
     "accounts": "npx hardhat accounts",
     "clean": "npx hardhat clean",
     "prepare": "husky",
-    "lint": "eslint"
+    "lint": "eslint",
+    "deploy:usdc": "npx ts-node scripts/01-deployment-usdc.ts",
+    "deploy:investment:pools": "npx ts-node scripts/02-deployment-investment-pools.ts",
+    "verify:hydro:token": "npx hardhat verify --network arbitrumSepolia --constructor-args arguments/hydroTokenArgument.ts",
+    "verify:investment:pools": "npx hardhat verify --network arbitrumSepolia --constructor-args arguments/investmentPoolsArgument.ts",
+    "verify:mock:usdc": "npx hardhat verify --network arbitrumSepolia --constructor-args arguments/mockUsdcArgument.ts"
   },
   "repository": {
     "type": "git",
