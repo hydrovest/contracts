@@ -9,9 +9,9 @@ import { userConnectWallet } from "./helpers/userConnectWallet";
 import { connectToBlockchainWithRPC } from "./helpers/connectToBlockchainWithRPC";
 import { USDC_CONTRACT_ADDRESS } from "./helpers/constants";
 
-const TOKEN_NAME = "Hydro Token";
-const TOKEN_SYMBOL = "HYDRO";
-const EXCHANGE_RATE = BigInt(10 ** 12); // Set exchange rate to 10^12 (1 USDC = 1 FISH, accounting for decimal difference)
+export const TOKEN_NAME = "Hydro Token";
+export const TOKEN_SYMBOL = "HYDRO";
+export const EXCHANGE_RATE = BigInt(10 ** 12); // Set exchange rate to 10^12 (1 USDC = 1 FISH, accounting for decimal difference)
 
 async function getUserAccount() {
   return await userConnectWallet();

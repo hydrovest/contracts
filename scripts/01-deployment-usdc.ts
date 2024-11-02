@@ -8,8 +8,8 @@ import {
 import { userConnectWallet } from "./helpers/userConnectWallet";
 import { connectToBlockchainWithRPC } from "./helpers/connectToBlockchainWithRPC";
 
-const TOKEN_NAME = "USD Coin";
-const TOKEN_SYMBOL = "USDC";
+export const TOKEN_NAME = "USD Coin";
+export const TOKEN_SYMBOL = "USDC";
 
 async function getUserAccount() {
   return await userConnectWallet();
